@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wedding_time/constants.dart';
+import 'package:wedding_time/pages/home/home_page.dart';
 import 'package:wedding_time/pages/login/authentication_bloc.dart';
 import 'package:wedding_time/pages/welcome/welcome_page.dart';
 import 'package:wedding_time/services/helper.dart';
-
-import 'package:wedding_time/ui/home/home_screen.dart';
 
 import '../login/login_page/login_page.dart';
 
@@ -39,7 +38,7 @@ class _RootPagePageState extends State<RootPage> {
 
               break;
             case AuthState.authenticated:
-              pushReplacement(context, HomeScreen(user: state.user!));
+              pushReplacement(context, HomePage());
               break;
             case AuthState.unauthenticated:
               Navigator.of(context).pushReplacement(

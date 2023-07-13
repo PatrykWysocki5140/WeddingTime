@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -11,9 +10,7 @@ import 'package:wedding_time/pages/home/home_page.dart';
 import 'package:wedding_time/pages/login/authentication_bloc.dart';
 import 'package:wedding_time/pages/login/register_page/register_bloc/register_bloc.dart';
 import 'package:wedding_time/services/helper.dart';
-import 'package:wedding_time/ui/home/home_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:wedding_time/widgets/loading/loading_cubit.dart';
 
 class RegisterPage extends StatefulWidget {

@@ -9,6 +9,7 @@ import 'package:wedding_time/constants.dart';
 import 'package:wedding_time/pages/home/home_page.dart';
 import 'package:wedding_time/pages/login/authentication_bloc.dart';
 import 'package:wedding_time/pages/login/register_page/register_bloc/register_bloc.dart';
+import 'package:wedding_time/pages/user_type_route/user_type_route.dart';
 import 'package:wedding_time/services/helper.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wedding_time/widgets/loading/loading_cubit.dart';
@@ -44,7 +45,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 listener: (context, state) {
                   context.read<LoadingCubit>().hideLoading();
                   if (state.authState == AuthState.authenticated) {
-                    pushAndRemoveUntil(context, HomePage(), false);
+                    pushAndRemoveUntil(context, UserTypeRoute(), false);
                   } else {
                     Fluttertoast.showToast(
                         msg: AppLocalizations.of(context)!.signuperror);

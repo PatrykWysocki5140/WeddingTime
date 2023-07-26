@@ -1,11 +1,8 @@
 // ignore_for_file: library_private_types_in_public_api
 import 'package:flutter/material.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:wedding_time/notifiers/LanguageNotifier.dart';
-import 'package:country_flags/country_flags.dart';
-import 'package:countries_flag/countries_flag.dart';
 
 class LanguageButton extends StatefulWidget {
   const LanguageButton({super.key});
@@ -19,18 +16,12 @@ class _LanguageButtonWidgetState extends State<LanguageButton> {
   Widget build(BuildContext context) {
     var provider = Provider.of<LanguageNotifier>(context);
     var flag = provider.currentLanguage == "pl"
-        ? Flags.poland
-        : Flags.unitedStatesOfAmerica;
+        ? 'asset/flags/poland.png'
+        : 'asset/flags/america.png';
     return Consumer<LanguageNotifier>(
       builder: (context, languages, child) => ListTile(
         //   leading: const Icon(Icons.language),
-        leading: Expanded(
-          child: CountriesFlag(
-            flag,
-            fit: BoxFit.fitHeight,
-            clipBehavior: Clip.antiAliasWithSaveLayer,
-          ),
-        ),
+        leading: Expanded(child: Image.asset(flag)),
         title: Text(AppLocalizations.of(context)!.changeLanguage),
         onTap: () => {
           languages.getLang().then((value) => {

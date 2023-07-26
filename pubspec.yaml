@@ -64,6 +64,7 @@ dependencies:
   progress_dialog_null_safe: ^1.0.7
   country_flags: ^2.1.0
   countries_flag: ^1.0.0
+  firebase_database: ^10.2.4
 
 dev_dependencies:
   flutter_test:
@@ -93,6 +94,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - asset/images/  
+    - asset/flags/  
     
   fonts:
    - family: GrandHotel

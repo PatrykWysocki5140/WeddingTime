@@ -6,6 +6,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wedding_time/constants.dart';
 import 'package:wedding_time/models/user.dart';
 import 'package:wedding_time/services/authenticate.dart';
+import 'package:wedding_time/services/fireStore/user.dart';
+
+import '../../notifiers/admin.dart';
 
 part 'authentication_event.dart';
 
@@ -42,6 +45,8 @@ class AuthenticationBloc
           event.email, event.password);
       if (result != null && result is User) {
         user = result;
+        bool val = await FirestoreUser.checkAdmin(user!.userID);
+        user!.setAdmin(val);
         emit(AuthenticationState.authenticated(user!));
       } else if (result != null && result is String) {
         emit(AuthenticationState.unauthenticated(message: result));

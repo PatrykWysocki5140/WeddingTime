@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wedding_time/pages/login/authentication_bloc.dart';
 import 'package:wedding_time/pages/login/login_page/login_bloc/login_bloc.dart';
 import 'package:wedding_time/pages/login/reset_pass_page/reset_pass_page.dart';
+import 'package:wedding_time/pages/user_type_route/user_type_route.dart';
 
 import 'package:wedding_time/services/helper.dart';
 
@@ -31,6 +32,8 @@ class _LoginPage extends State<LoginPage> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    email = "estu@onet.pl";
+    password = "Qweasdzxc123";
     return BlocProvider<LoginBloc>(
       create: (context) => LoginBloc(),
       child: Builder(builder: (context) {
@@ -45,7 +48,7 @@ class _LoginPage extends State<LoginPage> {
                   await context.read<LoadingCubit>().hideLoading();
                   if (state.authState == AuthState.authenticated) {
                     if (!mounted) return;
-                    pushAndRemoveUntil(context, HomePage(), false);
+                    pushAndRemoveUntil(context, UserTypeRoute(), false);
                   } else {
                     if (!mounted) return;
                     Fluttertoast.showToast(
@@ -97,6 +100,8 @@ class _LoginPage extends State<LoginPage> {
                           padding:
                               EdgeInsets.symmetric(horizontal: width * 0.2),
                           child: TextFormField(
+                              controller:
+                                  TextEditingController(text: 'estu@onet.pl'),
                               textAlignVertical: TextAlignVertical.center,
                               textInputAction: TextInputAction.next,
                               validator: (value) => validEmail(context, value),
@@ -113,6 +118,8 @@ class _LoginPage extends State<LoginPage> {
                           padding:
                               EdgeInsets.symmetric(horizontal: width * 0.2),
                           child: TextFormField(
+                            controller:
+                                TextEditingController(text: 'Qweasdzxc123'),
                             textAlignVertical: TextAlignVertical.center,
                             obscureText: true,
                             validator: (value) => validPassword(context, value),

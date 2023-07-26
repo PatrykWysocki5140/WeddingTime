@@ -35,7 +35,6 @@ class _RootPagePageState extends State<RootPage> {
             case AuthState.firstRun:
               Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (context) => const WelcomePage()));
-
               break;
             case AuthState.authenticated:
               pushReplacement(context, HomePage());

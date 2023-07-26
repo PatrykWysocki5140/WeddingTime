@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:provider/provider.dart';
-import 'package:wedding_time/notifiers/LanguageNotifier.dart';
 import 'package:wedding_time/pages/login/login_page/login_page.dart';
 import 'package:wedding_time/pages/login/register_page/register_page.dart';
 import 'package:wedding_time/pages/welcome/welcome_bloc/welcome_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:country_flags/country_flags.dart';
 import 'package:wedding_time/widgets/language_button.dart';
 import '../../services/helper.dart';
 

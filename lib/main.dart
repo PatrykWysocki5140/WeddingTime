@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:wedding_time/constants.dart';
+import 'package:wedding_time/notifiers/admin.dart';
 import 'package:wedding_time/styles/style.dart';
 import 'notifiers/LanguageNotifier.dart';
 import 'pages/root/root.dart';
@@ -14,7 +17,6 @@ import '../../../widgets/loading/loading_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   runApp(FutureBuilder(
       future: Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform,
@@ -28,6 +30,7 @@ void main() async {
             child: MultiProvider(
               providers: [
                 ChangeNotifierProvider(create: (context) => LanguageNotifier()),
+                ChangeNotifierProvider(create: (context) => AdminNotifier()),
               ],
               child: const WeddingApp(),
             )));
@@ -43,8 +46,8 @@ class WeddingApp extends StatefulWidget {
 
 class WeddingAppState extends State<WeddingApp> with WidgetsBindingObserver {
   @override
-  Widget build(BuildContext context) => Consumer<LanguageNotifier>(
-      builder: (context, measurements, child) =>
+  Widget build(BuildContext context) => Consumer<AdminNotifier>(
+      builder: (context, admin, child) =>
           Consumer<LanguageNotifier>(builder: (context, languages, child) {
             var lang = Provider.of<LanguageNotifier>(context);
             String language = 'en';

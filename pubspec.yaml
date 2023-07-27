@@ -95,6 +95,7 @@ flutter:
   assets:
     - asset/images/  
     - asset/flags/  
+    - asset/flowers/  
     
   fonts:
    - family: GrandHotel

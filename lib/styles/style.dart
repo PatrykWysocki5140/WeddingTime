@@ -20,7 +20,8 @@ ThemeData theme(BuildContext context) {
           selectionColor: kAccentColor,
           selectionHandleColor: kAccentColor,
           cursorColor: kAccentColor),
-      scaffoldBackgroundColor: kBackgroundColor,
+      // scaffoldBackgroundColor: kBackgroundColor,
+      scaffoldBackgroundColor: Colors.transparent,
       primaryColor: kPrimaryColor,
       appBarTheme: const AppBarTheme(
         color: kPrimaryColor,

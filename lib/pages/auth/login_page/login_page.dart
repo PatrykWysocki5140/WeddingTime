@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wedding_time/constants.dart';
-import 'package:wedding_time/pages/home/home_page.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wedding_time/pages/login/authentication_bloc.dart';

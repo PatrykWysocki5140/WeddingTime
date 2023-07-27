@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:wedding_time/constants.dart';
-import 'package:wedding_time/pages/home/home_page.dart';
 import 'package:wedding_time/pages/login/authentication_bloc.dart';
 import 'package:wedding_time/pages/login/register_page/register_bloc/register_bloc.dart';
 import 'package:wedding_time/pages/user_type_route/user_type_route.dart';

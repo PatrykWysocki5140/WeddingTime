@@ -19,7 +19,7 @@ class FirebaseCrud {
       "contact_no": contactno
     };
 
-    var result = documentReferencer.set(data).whenComplete(() {
+    documentReferencer.set(data).whenComplete(() {
       response.code = 200;
       response.message = "Sucessfully added to the database";
     }).catchError((e) {

@@ -8,8 +8,6 @@ import 'package:wedding_time/models/user.dart';
 import 'package:wedding_time/services/authenticate.dart';
 import 'package:wedding_time/services/fireStore/user.dart';
 
-import '../../notifiers/admin.dart';
-
 part 'authentication_event.dart';
 
 part 'authentication_state.dart';

@@ -7,6 +7,7 @@ import 'package:wedding_time/pages/welcome/welcome_bloc/welcome_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wedding_time/widgets/language_button.dart';
 import '../../services/helper.dart';
+import '../../widgets/text_gradient_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -62,7 +63,7 @@ class WelcomePage extends StatelessWidget {
                           left: width * 0.35,
                           right: width * 0.35,
                           top: height * 0.02),
-                      child: TextButton(
+                      child: GradientRandomButton(
                         onPressed: () {
                           Fluttertoast.showToast(
                               msg: AppLocalizations.of(context)!.loginprocess);
@@ -78,7 +79,7 @@ class WelcomePage extends StatelessWidget {
                           left: width * 0.35,
                           right: width * 0.35,
                           top: height * 0.02),
-                      child: TextButton(
+                      child: GradientRandomButton(
                         onPressed: () {
                           Fluttertoast.showToast(
                               msg: AppLocalizations.of(context)!.signupprocess);

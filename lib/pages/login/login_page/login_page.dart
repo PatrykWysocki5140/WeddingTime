@@ -11,6 +11,7 @@ import 'package:wedding_time/pages/login/reset_pass_page/reset_pass_page.dart';
 import 'package:wedding_time/pages/user_type_route/user_type_route.dart';
 
 import 'package:wedding_time/services/helper.dart';
+import 'package:wedding_time/widgets/text_gradient_button.dart';
 
 import '../../../widgets/loading/loading_cubit.dart';
 
@@ -141,7 +142,7 @@ class _LoginPage extends State<LoginPage> {
                               left: width * 0.35,
                               right: width * 0.35,
                               top: height * 0.02),
-                          child: TextButton(
+                          child: GradientRandomButton(
                             onPressed: () {
                               Fluttertoast.showToast(
                                   msg:

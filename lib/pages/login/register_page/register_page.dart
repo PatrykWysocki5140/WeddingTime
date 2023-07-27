@@ -13,6 +13,7 @@ import 'package:wedding_time/pages/user_type_route/user_type_route.dart';
 import 'package:wedding_time/services/helper.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wedding_time/widgets/loading/loading_cubit.dart';
+import 'package:wedding_time/widgets/text_gradient_button.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -193,7 +194,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 left: width * 0.35,
                                 right: width * 0.35,
                                 top: height * 0.02),
-                            child: TextButton(
+                            child: GradientRandomButton(
                               onPressed: () {
                                 context.read<SignUpBloc>().add(
                                       ToggleEulaCheckboxEvent(

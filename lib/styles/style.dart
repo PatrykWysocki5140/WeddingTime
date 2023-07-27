@@ -44,12 +44,28 @@ ThemeData theme(BuildContext context) {
       ),
       textTheme: textTheme(context),
       visualDensity: VisualDensity.adaptivePlatformDensity,
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            // backgroundColor: kPrimaryColor,
+            // backgroundColor: kAccentColor,
+            foregroundColor: kTextColor,
+            minimumSize: const Size.fromHeight(50),
+            textStyle: const TextStyle(
+                fontFamily: 'ClearSans',
+                color: kTextColor,
+                fontSize: 18,
+                fontWeight: FontWeight.bold)),
+      ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
-            backgroundColor: kPrimaryColor,
+            // backgroundColor: kPrimaryColor,
+            backgroundColor: kAccentColor,
             foregroundColor: kTextColor,
             minimumSize: const Size.fromHeight(50),
             textStyle: const TextStyle(

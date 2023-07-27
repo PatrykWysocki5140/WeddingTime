@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 
 // Colors that we use in our app
 //const kPrimaryColor = Color(0xC56286);
-const kPrimaryColor = Color.fromARGB(255, 197, 98, 134);
-const kAccentColor = Color.fromARGB(255, 85, 193, 214);
+//const kPrimaryColor = Color.fromARGB(255, 197, 98, 134);
+const kPrimaryColor = Color.fromARGB(255, 236, 95, 147);
+const kPrimaryColorGradient = Color.fromARGB(255, 236, 95, 147);
+//const kAccentColor = Color.fromARGB(255, 85, 193, 214);
+const kAccentColor = Color.fromARGB(255, 90, 219, 245);
+const kAccentColorGradient = Color.fromARGB(255, 90, 219, 245);
 const kTextColor = Color(0xFF202020);
 const kTextColorAlt = Color.fromARGB(255, 231, 230, 230);
 const kErrorColor = Color.fromARGB(255, 146, 35, 35);

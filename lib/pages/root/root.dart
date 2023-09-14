@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wedding_time/constants.dart';
 import 'package:wedding_time/pages/home/home_page.dart';
-import 'package:wedding_time/pages/login/authentication_bloc.dart';
+import 'package:wedding_time/blocs/auth/authentication_bloc.dart';
 import 'package:wedding_time/pages/welcome/welcome_page.dart';
 import 'package:wedding_time/services/helper.dart';
 
-import '../login/login_page/login_page.dart';
+import '../auth/login_page/login_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});

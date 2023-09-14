@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wedding_time/constants.dart';
-import 'package:wedding_time/pages/login/reset_pass_page/reset_pass_bloc/reset_pass_cubit.dart';
+import 'package:wedding_time/blocs/reset_password/reset_pass_cubit.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wedding_time/services/helper.dart';

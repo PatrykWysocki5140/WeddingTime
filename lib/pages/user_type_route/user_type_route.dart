@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:wedding_time/models/user.dart';
 import 'package:wedding_time/notifiers/admin.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wedding_time/pages/login/authentication_bloc.dart';
+import 'package:wedding_time/blocs/auth/authentication_bloc.dart';
 import 'package:wedding_time/pages/user_route/home/home_page.dart';
 
 import '../admin_route/admin_home/admin_home_page.dart';

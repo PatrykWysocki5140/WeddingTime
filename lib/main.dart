@@ -10,7 +10,7 @@ import 'notifiers/LanguageNotifier.dart';
 import 'pages/root/root.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'package:wedding_time/pages/login/authentication_bloc.dart';
+import 'package:wedding_time/blocs/auth/authentication_bloc.dart';
 import '../../../widgets/loading/loading_cubit.dart';
 
 void main() async {

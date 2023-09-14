@@ -8,7 +8,7 @@ import 'package:wedding_time/models/user.dart';
 import 'package:wedding_time/notifiers/admin.dart';
 import 'package:wedding_time/test2/addData.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wedding_time/pages/login/authentication_bloc.dart';
+import 'package:wedding_time/blocs/auth/authentication_bloc.dart';
 
 class HomePage extends StatefulWidget {
   @override

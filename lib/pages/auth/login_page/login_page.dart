@@ -4,9 +4,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wedding_time/constants.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wedding_time/pages/login/authentication_bloc.dart';
-import 'package:wedding_time/pages/login/login_page/login_bloc/login_bloc.dart';
-import 'package:wedding_time/pages/login/reset_pass_page/reset_pass_page.dart';
+import 'package:wedding_time/blocs/auth/authentication_bloc.dart';
+import 'package:wedding_time/blocs/login/login_bloc.dart';
+import 'package:wedding_time/pages/auth/reset_pass_page/reset_pass_page.dart';
 import 'package:wedding_time/pages/user_type_route/user_type_route.dart';
 
 import 'package:wedding_time/services/helper.dart';
